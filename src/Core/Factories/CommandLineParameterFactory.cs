@@ -2,7 +2,7 @@
 {
 	public static class CommandLineParameterFactory
 	{
-		public static CommandLineParameter Create<T>(string name, string prefix, string separator, bool isRequired, bool hasValue, string description)
+		public static CommandLineParameter Create<T>(string name, string prefix = "-", string separator = "=", bool isRequired = true, bool hasValue = true, string description = "")
 		{
 			if (hasValue)
 			{
