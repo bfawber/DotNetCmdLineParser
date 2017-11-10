@@ -31,12 +31,12 @@ namespace Core
 
 			for(int i=0; i < args.Length; i++)
 			{
-				string[] splitByEquals = args[i].Split(Separator.ToCharArray());
-				if(string.Equals(splitByEquals[0], nameWithPrefix, StringComparison.OrdinalIgnoreCase))
+				string[] valueSplit = args[i].Split(Separator.ToCharArray());
+				if(string.Equals(valueSplit[0], nameWithPrefix, StringComparison.OrdinalIgnoreCase))
 				{
-					if(splitByEquals.Length == 2)
+					if(valueSplit.Length == 2)
 					{
-						value = splitByEquals[1];
+						value = valueSplit[1];
 					}
 					else if(Required)
 					{
