@@ -1,9 +1,9 @@
 ﻿using Core.Exceptions;
 using System;
 
-namespace Core
+namespace Core.Model
 {
-	public class CommandLineParameter
+	public class CommandLineParameter : ICommandLineParameter
 	{
 		public Type Type { get; set; }
 

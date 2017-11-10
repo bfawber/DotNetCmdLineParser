@@ -1,4 +1,6 @@
-﻿namespace Core.Factories
+﻿using Core.Model;
+
+namespace Core.Factories
 {
 	public static class CommandLineParameterFactory
 	{
