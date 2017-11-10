@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Test
 {
-	public class UnitTest1
+	public class CommandLineParserTests
     {
         [Fact]
         public void CanCreateCmdLineParser()
