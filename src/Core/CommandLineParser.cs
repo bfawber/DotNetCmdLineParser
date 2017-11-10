@@ -7,7 +7,7 @@ namespace Core
 {
 	public class CommandLineParser
     {
-		private Dictionary<string, CommandLineParameter> commandLineParameters = new Dictionary<string, CommandLineParameter>();
+		private readonly Dictionary<string, CommandLineParameter> _commandLineParameters = new Dictionary<string, CommandLineParameter>();
 	    private readonly CommandLineFlag _helpCommandLineFlag;
 
 		public CommandLineParser()
@@ -23,7 +23,7 @@ namespace Core
 
 		public void AddParameter<T>(string name, string prefix = "-", string separator = "=", bool isRequired = true, bool hasValue = true, string description = "")
 		{
-			commandLineParameters.Add(name, CommandLineParameterFactory.Create<T>(name, prefix, separator, isRequired, hasValue, description));
+			_commandLineParameters.Add(name, CommandLineParameterFactory.Create<T>(name, prefix, separator, isRequired, hasValue, description));
 		}
 
 		public T Parse<T>(string[] args) where T : new()
@@ -37,7 +37,7 @@ namespace Core
 			Type typeOfT = typeof(T);
 
 			// Find value for each entry in dictionary
-			foreach(var cmdLineParameter in commandLineParameters)
+			foreach(var cmdLineParameter in _commandLineParameters)
 			{
 				PropertyInfo property = typeOfT.GetRuntimeProperty(cmdLineParameter.Key);
 				MethodInfo genericMethod = typeof(CommandLineParser).GetRuntimeMethod(nameof(ConvertToType), new Type[] { typeof(string) });
@@ -62,7 +62,7 @@ namespace Core
 
 	    private void PrintHelpStatement()
 	    {
-		    foreach (var parameter in commandLineParameters)
+		    foreach (var parameter in _commandLineParameters)
 		    {
 			    Console.WriteLine($"{parameter.Value.Prefix}{parameter.Key}: {parameter.Value.Description}");
 		    }
