@@ -28,7 +28,7 @@ namespace Core
 
 		public T Parse<T>(string[] args) where T : new()
 		{
-			if (HandleHelpParameter(args))
+			if (args == null || HandleHelpParameter(args))
 			{
 				return new T();
 			}
