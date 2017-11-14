@@ -9,7 +9,7 @@ namespace Core
 {
 	public class CommandLineParser : ICommandLineParser
     {
-		private readonly Dictionary<string, CommandLineParameter> _commandLineParameters = new Dictionary<string, CommandLineParameter>();
+		private readonly Dictionary<string, ICommandLineParameter> _commandLineParameters = new Dictionary<string, ICommandLineParameter>();
 
 		private readonly Dictionary<Type, MethodInfo> _methodCache = new Dictionary<Type, MethodInfo>();
 
