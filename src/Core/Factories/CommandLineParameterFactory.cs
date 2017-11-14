@@ -1,6 +1,6 @@
-﻿using Core.Model;
+﻿using DotNetCommandLineParser.Core.Model;
 
-namespace Core.Factories
+namespace DotNetCommandLineParser.Core.Factories
 {
 	/// <summary>
 	/// A factory for creating <see cref="CommandLineParameter"/> objects

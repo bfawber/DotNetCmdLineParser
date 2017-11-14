@@ -1,4 +1,4 @@
-﻿namespace Core
+﻿namespace DotNetCommandLineParser.Core
 {
 	/// <summary>
 	/// An interface that holds methods needed for command line parsing

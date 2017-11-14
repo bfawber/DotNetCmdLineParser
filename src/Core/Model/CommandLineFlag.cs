@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Core.Model
+namespace DotNetCommandLineParser.Core.Model
 {
 	/// <summary>
 	/// A type of command line parameter that doesn't have a value.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Core.Exceptions
+namespace DotNetCommandLineParser.Core.Exceptions
 {
 	/// <summary>
 	/// An exception class for when an argument requires a value, but is not provided one

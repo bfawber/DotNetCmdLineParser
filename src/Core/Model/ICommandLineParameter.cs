@@ -1,4 +1,4 @@
-﻿namespace Core.Model
+﻿namespace DotNetCommandLineParser.Core.Model
 {
 	/// <summary>
 	/// An interface that all command line parameters should implement

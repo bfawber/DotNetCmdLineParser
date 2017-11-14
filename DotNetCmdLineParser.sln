@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{7D2D2E4E-31BE-4CEF-9C00-2898AEB42AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCommandLineParser.Core", "src\Core\DotNetCommandLineParser.Core.csproj", "{7D2D2E4E-31BE-4CEF-9C00-2898AEB42AB2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "src\Test\Test.csproj", "{F7C803FA-8C8B-409B-A4D1-E5D36A2E0638}"
 EndProject
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5DD7678-7C5A-44A4-A0B9-219C7428C8A9}
 	EndGlobalSection
 EndGlobal

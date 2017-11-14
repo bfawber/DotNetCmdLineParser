@@ -1,11 +1,11 @@
-﻿using Core.Factories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
-using Core.Model;
+using DotNetCommandLineParser.Core.Factories;
+using DotNetCommandLineParser.Core.Model;
 
-namespace Core
+namespace DotNetCommandLineParser.Core
 {
 	/// <summary>
 	/// Parses the command line arguments

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Core.Exceptions
+namespace DotNetCommandLineParser.Core.Exceptions
 {
 	/// <summary>
 	/// An exception class for when a required argument is not found in the arguments string

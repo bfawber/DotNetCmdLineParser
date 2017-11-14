@@ -1,7 +1,7 @@
-﻿using Core.Exceptions;
-using System;
+﻿using System;
+using DotNetCommandLineParser.Core.Exceptions;
 
-namespace Core.Model
+namespace DotNetCommandLineParser.Core.Model
 {
 	/// <summary>
 	/// A class to represent a command line parameter
@@ -63,11 +63,16 @@ namespace Core.Model
 			for(int i=0; i < args.Length; i++)
 			{
 				string[] valueSplit = args[i].Split(Separator.ToCharArray());
-				if(string.Equals(valueSplit[0], nameWithPrefix, StringComparison.OrdinalIgnoreCase))
+				if(string.Equals(valueSplit[0].Trim(), nameWithPrefix, StringComparison.OrdinalIgnoreCase))
 				{
 					if(valueSplit.Length == 2)
 					{
-						value = valueSplit[1];
+						value = valueSplit[1].Trim();
+						if (string.IsNullOrEmpty(value))
+						{
+							throw new ArgumentWithoutValueException(Name);
+						}
+						break;
 					}
 					else if(Required)
 					{
@@ -98,7 +103,7 @@ namespace Core.Model
 			// Spin through all arguments to find the command line parameter
 			for (int i = 0; i < args.Length; i++)
 			{
-				if (string.Equals(args[i], nameWithPrefix, StringComparison.OrdinalIgnoreCase))
+				if (string.Equals(args[i].Trim(), nameWithPrefix, StringComparison.OrdinalIgnoreCase))
 				{
 					return true;
 				}
